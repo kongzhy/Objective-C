@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString *const JDPNotification;
+
 @interface ViewController : UIViewController
 
 

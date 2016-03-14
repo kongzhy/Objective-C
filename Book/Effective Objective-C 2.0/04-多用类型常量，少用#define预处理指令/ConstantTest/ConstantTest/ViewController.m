@@ -8,6 +8,13 @@
 
 #import "ViewController.h"
 
+#define ANIMATION_DURATION 3
+
+NSString *const JDPNotification = @"JDPNotification";
+
+static const NSTimeInterval kAnimationDuration = 3;
+static  NSString *const name = @"Cownay";
+
 @interface ViewController ()
 
 @end
@@ -16,12 +23,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%@", name);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self startAnimation];
+}
+
+- (void)startAnimation {
+    [UIView animateWithDuration:kAnimationDuration animations:^{
+        self.view.backgroundColor = [UIColor redColor];
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 @end
