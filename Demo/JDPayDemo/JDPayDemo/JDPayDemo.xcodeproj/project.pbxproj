@@ -15,6 +15,7 @@
 		65EDF5AA1C84918600095FD9 /* JDPayDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5A91C84918600095FD9 /* JDPayDemoTests.m */; };
 		65EDF5B51C84918600095FD9 /* JDPayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5B41C84918600095FD9 /* JDPayDemoUITests.m */; };
 		65EDF5D11C885EFD00095FD9 /* JDPBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5CE1C885EFD00095FD9 /* JDPBaseObject.m */; };
+		CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		65EDF5B61C84918600095FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65EDF5CD1C885EFD00095FD9 /* JDPBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPBaseObject.h; sourceTree = "<group>"; };
 		65EDF5CE1C885EFD00095FD9 /* JDPBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPBaseObject.m; sourceTree = "<group>"; };
+		CC4701091CD1F9C6001DB5AD /* JDPDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPDeviceUtils.h; sourceTree = "<group>"; };
+		CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPDeviceUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,7 @@
 		65EDF5C31C84986C00095FD9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CC4700C01CD1D77B001DB5AD /* Utils */,
 				65D1EC071C8F279F001CEE3C /* Macros */,
 				65D1EBBD1C8D28D6001CEE3C /* Category */,
 				65EDF5CA1C885EFD00095FD9 /* Base */,
@@ -206,6 +210,23 @@
 			children = (
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		CC4700C01CD1D77B001DB5AD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CC4701081CD1F9C6001DB5AD /* JDPDeviceUtils */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CC4701081CD1F9C6001DB5AD /* JDPDeviceUtils */ = {
+			isa = PBXGroup;
+			children = (
+				CC4701091CD1F9C6001DB5AD /* JDPDeviceUtils.h */,
+				CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */,
+			);
+			path = JDPDeviceUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +364,7 @@
 				65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */,
 				65EDF5941C84918600095FD9 /* AppDelegate.m in Sources */,
 				65EDF5911C84918600095FD9 /* main.m in Sources */,
+				CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */,
 				65EDF5D11C885EFD00095FD9 /* JDPBaseObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
