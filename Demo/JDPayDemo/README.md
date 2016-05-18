@@ -1,2 +1,0 @@
-# JDPay
-Create By Conway
