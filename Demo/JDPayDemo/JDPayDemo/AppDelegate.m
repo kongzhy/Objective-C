@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
 #import "UIWebView+JDPCategory.h"
 
 @interface AppDelegate ()
@@ -17,8 +18,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    RootViewController *rootViewController = [[RootViewController alloc] init];
+    UINavigationController *navigationConroller = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    navigationConroller.navigationBar.translucent = NO;
+    self.window.rootViewController = navigationConroller;
+    [self.window makeKeyAndVisible];
     
     [UIWebView jdp_setupWebViewUserAgent];
+    
     return YES;
 }
 
