@@ -15,7 +15,7 @@
                               success:(void (^)(JDPHTTPRequest *request, id  responseObject))success
                               failure:(void (^)(JDPHTTPRequest *request, NSError * error))failure {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.operationQueue.maxConcurrentOperationCount = 5;
+    manager.operationQueue.maxConcurrentOperationCount = 4;
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];    
     NSURLSessionDataTask *task = [manager POST:request.serverURL parameters:request.paramDict progress:^(NSProgress * _Nonnull uploadProgress) {
