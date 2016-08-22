@@ -113,6 +113,8 @@
 		65EDF5CE1C885EFD00095FD9 /* JDPBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPBaseObject.m; sourceTree = "<group>"; };
 		CC4701091CD1F9C6001DB5AD /* JDPDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPDeviceUtils.h; sourceTree = "<group>"; };
 		CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPDeviceUtils.m; sourceTree = "<group>"; };
+		CC67321E1D6B170900172C32 /* JDPColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPColorMacros.h; sourceTree = "<group>"; };
+		CC67321F1D6B179900172C32 /* JDPLogMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPLogMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				65D1EC081C8F279F001CEE3C /* JDPScreenMacros.h */,
+				CC67321E1D6B170900172C32 /* JDPColorMacros.h */,
+				CC67321F1D6B179900172C32 /* JDPLogMacros.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
