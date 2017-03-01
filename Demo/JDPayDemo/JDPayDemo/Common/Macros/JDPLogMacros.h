@@ -10,9 +10,9 @@
 #define JDPLogMacros_h
 
 #ifdef DEBUG
-#define JDP_Log(...) NSLog(@"%s Line:%d %@",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define JDP_Log(format, ...) NSLog(@"\n(FileName:%s)\n(FuncName:%s)\n(LineNumber:%d)\n"format,__FILE__,__FUNCTION__,__LINE__,##__VA_ARGS__)
 #else
-#define JDP_Log(...)
+#define JDP_Log(format, ...)
 #endif
 
 #endif /* JDPLogMacros_h */
