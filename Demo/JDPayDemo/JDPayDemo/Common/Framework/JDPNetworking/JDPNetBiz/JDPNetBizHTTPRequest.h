@@ -12,4 +12,13 @@
 
 @property (nonatomic, copy) NSArray *successCodes;
 
+
+@property (nonatomic, copy) NSString *resultCode;
+
+@property (nonatomic, copy) NSString *resultMsg;
+
+@property (nonatomic, copy) NSObject *resultData;
+
+@property (nonatomic, copy) NSObject *resultCtrl;
+
 @end

@@ -36,4 +36,18 @@
  */
 @property (nonatomic, copy) NSDictionary *paramDict;
 
+
+
+
+
+/**
+ *  服务响应
+ */
+@property (nonatomic, strong) NSHTTPURLResponse *URLResponse;
+
+/**
+ *  解析后的原生数据对象
+ */
+@property (nonatomic, strong) NSObject *dataObject;
+
 @end

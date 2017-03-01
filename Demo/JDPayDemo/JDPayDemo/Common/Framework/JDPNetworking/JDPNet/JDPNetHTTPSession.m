@@ -9,7 +9,7 @@
 #import "JDPNetHTTPSession.h"
 #import "Reachability.h"
 #import "JDPNetParse.h"
-#import "JDPNetHTTPResponse.h"
+#import "JDPNetManager.h"
 
 @interface JDPNetHTTPSession ()
 
@@ -43,20 +43,14 @@
     /// 检查网络状况
     if (![self checkNetWork]) {
         error = [[NSError alloc] initWithDomain:JDPNetErrorDomain code:JDPNetNetworkErrorCode userInfo:@{NSLocalizedDescriptionKey : JDPNetNetworkErrorDescription}];
-        // 保证回调在主线程
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.failureBlock(_request, nil, error);
-        });
+        [self requestFailureWithError:error];
         return;
     }
     
     /// 检查地址和服务
     if (![self checkURLWithRequest:_request]) {
         error = [[NSError alloc] initWithDomain:JDPNetErrorDomain code:JDPNetURLErrorCode userInfo:@{NSLocalizedDescriptionKey : JDPNetURLErrorDescription}];
-        // 保证回调在主线程
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.failureBlock(_request, nil, error);
-        });
+        [self requestFailureWithError:error];
         return;
     }
     
@@ -98,8 +92,6 @@
     NSData *bodyData = [JDPNetParse dataWithJSONObject:request.paramDict];
     [URLRequest setHTTPBody:bodyData];
     
-    JDPNetHTTPResponse *HTTPResponse = [[JDPNetHTTPResponse alloc] init];
-    
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *URLsession = [NSURLSession sessionWithConfiguration:configuration];
     NSURLSessionDataTask *task = [URLsession dataTaskWithRequest:URLRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -110,14 +102,11 @@
         }
         
         // 接收响应
-        HTTPResponse.URLResponse = response;
+        request.URLResponse = (NSHTTPURLResponse *)response;
         
         /// 请求失败
         if (error) {
-            // 保证回调在主线程
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.failureBlock(_request, HTTPResponse, error);
-            });
+            [self requestFailureWithError:error];
             return;
         }
         
@@ -125,14 +114,26 @@
         NSObject *object = [JDPNetParse JSONObjectWithData:data];
         
         // 接收数据
-        HTTPResponse.dataObject = object;
+        request.dataObject = object;
         
-        /// 根据数据分析业务成功和失败
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.successBlock(request, HTTPResponse);
-        });
+        [self requestSuccess];
     }];
     [task resume];
+}
+
+- (void)requestFailureWithError:(NSError *)error {
+    // 保证回调在主线程
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.failureBlock(_request, error);
+        [[JDPNetManager sharedManager] removeRequestWithIdentifier:self.identifier];
+    });
+}
+
+- (void)requestSuccess {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.successBlock(_request);
+        [[JDPNetManager sharedManager] removeRequestWithIdentifier:self.identifier];
+    });
 }
 
 @end

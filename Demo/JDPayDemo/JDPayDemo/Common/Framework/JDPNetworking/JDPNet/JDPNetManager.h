@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "JDPNetHTTPRequest.h"
-#import "JDPNetHTTPResponse.h"
 #import "JDPNetDefine.h"
 
 @interface JDPNetManager : NSObject
@@ -20,5 +19,7 @@
                               failure:(JDPNetFailureBlock)failureBlock;
 
 - (void)cancelRequestWithIdentifier:(NSString *)identifier;
+
+- (void)removeRequestWithIdentifier:(NSString *)identifier;
 
 @end

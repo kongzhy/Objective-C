@@ -29,7 +29,6 @@ extern NSString * const JDPNetBizBusinessErrorDescription;
 
 // Block
 @class JDPNetBizHTTPRequest;
-@class JDPNetBizHTTPResponse;
 
-typedef void (^JDPNetBizSuccessBlock) (JDPNetBizHTTPRequest *bizHTTPRequest, JDPNetBizHTTPResponse *bizHTTPResponse);
-typedef void (^JDPNetBizFailureBlock) (JDPNetBizHTTPRequest *bizHTTPRequest, JDPNetBizHTTPResponse *bizHTTPResponse, NSError * error);
+typedef void (^JDPNetBizSuccessBlock) (JDPNetBizHTTPRequest *bizHTTPRequest);
+typedef void (^JDPNetBizFailureBlock) (JDPNetBizHTTPRequest *bizHTTPRequest, NSError * error);

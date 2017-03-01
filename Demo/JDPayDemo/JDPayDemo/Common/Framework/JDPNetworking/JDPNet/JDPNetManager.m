@@ -63,4 +63,9 @@
     [session cancel];
 }
 
+#pragma mark - Private
+- (void)removeRequestWithIdentifier:(NSString *)identifier {
+    [_operationDict removeObjectForKey:identifier];
+}
+
 @end

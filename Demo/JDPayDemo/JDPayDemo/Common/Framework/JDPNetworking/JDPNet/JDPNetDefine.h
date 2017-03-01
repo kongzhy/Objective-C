@@ -25,8 +25,8 @@ extern NSString * const JDPNetURLErrorDescription;
 @class JDPNetHTTPRequest;
 @class JDPNetHTTPResponse;
 
-typedef void (^JDPNetSuccessBlock) (JDPNetHTTPRequest *request, JDPNetHTTPResponse *response);
-typedef void (^JDPNetFailureBlock) (JDPNetHTTPRequest *request, JDPNetHTTPResponse *response, NSError * error);
+typedef void (^JDPNetSuccessBlock) (JDPNetHTTPRequest *request);
+typedef void (^JDPNetFailureBlock) (JDPNetHTTPRequest *request, NSError * error);
 
 @interface JDPNetDefine : NSObject
 

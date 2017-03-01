@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "JDPNetBizDefine.h"
 #import "JDPNetBizHTTPRequest.h"
-#import "JDPNetBizHTTPResponse.h"
 
 @interface JDPNetBizManager : NSObject
 
