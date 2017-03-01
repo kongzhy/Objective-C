@@ -7,7 +7,9 @@
 //
 
 #import "RootViewController.h"
-#import "JDPRequestManager.h"
+#import "JDPLogMacros.h"
+#import "JDPNetBizManager.h"
+
 
 @interface RootViewController ()
 
@@ -39,56 +41,36 @@
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self startRequest];
+    JDP_Log(@"Cownay");
+    //[self startRequest];
 }
 
 
 - (void)startRequest {
-    JDPHTTPRequest *request = [[JDPHTTPRequest alloc] init];
-    request.serverURL = @"https://payfront.jd.com/service/preparePay";
-    request.paramDict = @{
-                                                      @"app_id" : @"com.wangyin.sdk",
-                                                      @"payParam" : @"4da0365626e73cb98d43d70fd8324de7dfa3496b34192ba5c7a499ee2d5adb43bac03fca0414af661dda89d30fe97653dbe70e50690cd8ab19c22300200781665f13fd2b5f4c297409ac81bf8167ad6b906a0facc83bd4a253a32e4359848e97b66933beea4d6d3bc6c637160b1a144d",
-                                                      @"idfa" : @"D75A62EC-CCF4-4F88-A32B-F584681B15B9",
-                                                      @"clientVersion" : @"1.0",
-                                                      @"osVersion" : @"9.3",
-                                                      @"openUDID" : @"1942d8f68e3e9ea09631dac42f162c2152b3e4fc",
-                                                      @"deviceType" : @"x86_64",
-                                                      @"appId" : @"mallapp",
-                                                      @"networkType" : @"WIFI",
-                                                      @"resolution" : @"750*1334",
-                                                      @"sdkVersion" : @"1.1.0",
-                                                      @"osPlatform" : @"iPhone OS"
-                                                      };
-    NSString *firstRequestIdentifier = [JDPRequestManager sendAsynchronousRequest:request success:^(JDPHTTPRequest *request, id responseObject) {
-        NSLog(@"%@", responseObject);
-    } failure:^(JDPHTTPRequest *request, NSError *error) {
-        NSLog(@"%@", error);
-    }];
-    NSLog(@"%@", firstRequestIdentifier);
+    JDPNetBizHTTPRequest *bizHTTPRequest = [[JDPNetBizHTTPRequest alloc] init];
+    bizHTTPRequest.serverURL = @"https://payfront.jd.com";
+    bizHTTPRequest.functionID = @"service/preparePay";
+    NSDictionary *paramDict = @{
+                                @"app_id" : @"com.wangyin.sdk",
+                                @"payParam" : @"4da0365626e73cb98d43d70fd8324de7dfa3496b34192ba5c7a499ee2d5adb43bac03fca0414af661dda89d30fe97653dbe70e50690cd8ab19c22300200781665f13fd2b5f4c297409ac81bf8167ad6b906a0facc83bd4a253a32e4359848e97b66933beea4d6d3bc6c637160b1a144d",
+                                @"idfa" : @"D75A62EC-CCF4-4F88-A32B-F584681B15B9",
+                                @"clientVersion" : @"1.0",
+                                @"osVersion" : @"9.3",
+                                @"openUDID" : @"1942d8f68e3e9ea09631dac42f162c2152b3e4fc",
+                                @"deviceType" : @"x86_64",
+                                @"appId" : @"mallapp",
+                                @"networkType" : @"WIFI",
+                                @"resolution" : @"750*1334",
+                                @"sdkVersion" : @"1.1.0",
+                                @"osPlatform" : @"iPhone OS"
+                                };
+    bizHTTPRequest.paramDict = paramDict;
     
-    JDPHTTPRequest *secondRequest = [[JDPHTTPRequest alloc] init];
-    secondRequest.serverURL = @"https://payfront.jd.com/service/Pay";
-    secondRequest.paramDict = @{
-                          @"app_id" : @"com.wangyin.sdk",
-                          @"payParam" : @"4da0365626e73cb98d43d70fd8324de7dfa3496b34192ba5c7a499ee2d5adb43bac03fca0414af661dda89d30fe97653dbe70e50690cd8ab19c22300200781665f13fd2b5f4c297409ac81bf8167ad6b906a0facc83bd4a253a32e4359848e97b66933beea4d6d3bc6c637160b1a144d",
-                          @"idfa" : @"D75A62EC-CCF4-4F88-A32B-F584681B15B9",
-                          @"clientVersion" : @"1.0",
-                          @"osVersion" : @"9.3",
-                          @"openUDID" : @"1942d8f68e3e9ea09631dac42f162c2152b3e4fc",
-                          @"deviceType" : @"x86_64",
-                          @"appId" : @"mallapp",
-                          @"networkType" : @"WIFI",
-                          @"resolution" : @"750*1334",
-                          @"sdkVersion" : @"1.1.0",
-                          @"osPlatform" : @"iPhone OS"
-                          };
-    NSString *secondRequestIdentifier = [JDPRequestManager sendAsynchronousRequest:secondRequest success:^(JDPHTTPRequest *request, id responseObject) {
-        NSLog(@"%@", responseObject);
-    } failure:^(JDPHTTPRequest *request, NSError *error) {
-        NSLog(@"%@", error);
+    [JDPNetBizManager sendAsynchronousRequest:bizHTTPRequest success:^(JDPNetBizHTTPRequest *bizHTTPRequest, JDPNetBizHTTPResponse *bizHTTPResponse) {
+        NSLog(@"%@", bizHTTPResponse);
+    } failure:^(JDPNetBizHTTPRequest *bizHTTPRequest, JDPNetBizHTTPResponse *bizHTTPResponse, NSError *error) {
+        NSLog(@"%@", bizHTTPResponse);
     }];
-    NSLog(@"%@", secondRequestIdentifier);
 }
 
 @end
