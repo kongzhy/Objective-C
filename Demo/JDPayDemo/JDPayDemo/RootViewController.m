@@ -66,10 +66,10 @@
                                 };
     bizHTTPRequest.paramDict = paramDict;
     
-    [JDPNetBizManager sendAsynchronousRequest:bizHTTPRequest success:^(JDPNetBizHTTPRequest *bizHTTPRequest, JDPNetBizHTTPResponse *bizHTTPResponse) {
-        NSLog(@"%@", bizHTTPResponse);
-    } failure:^(JDPNetBizHTTPRequest *bizHTTPRequest, JDPNetBizHTTPResponse *bizHTTPResponse, NSError *error) {
-        NSLog(@"%@", bizHTTPResponse);
+    [JDPNetBizManager sendAsynchronousRequest:bizHTTPRequest success:^(JDPNetBizHTTPRequest *bizHTTPRequest) {
+        NSLog(@"%@", bizHTTPRequest.dataObject);
+    } failure:^(JDPNetBizHTTPRequest *bizHTTPRequest, NSError *error) {
+        NSLog(@"%@", error);
     }];
 }
 

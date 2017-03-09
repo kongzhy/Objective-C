@@ -41,23 +41,23 @@
     NSError *error = nil;
     
     /// 检查网络状况
-    if (![self checkNetWork]) {
+    if (![self private_checkNetWork]) {
         error = [[NSError alloc] initWithDomain:JDPNetErrorDomain code:JDPNetNetworkErrorCode userInfo:@{NSLocalizedDescriptionKey : JDPNetNetworkErrorDescription}];
-        [self requestFailureWithError:error];
+        [self private_requestFailureWithError:error];
         return;
     }
     
     /// 检查地址和服务
-    if (![self checkURLWithRequest:_request]) {
+    if (![self private_checkURLWithRequest:_request]) {
         error = [[NSError alloc] initWithDomain:JDPNetErrorDomain code:JDPNetURLErrorCode userInfo:@{NSLocalizedDescriptionKey : JDPNetURLErrorDescription}];
-        [self requestFailureWithError:error];
+        [self private_requestFailureWithError:error];
         return;
     }
     
     /// 请求方法
     
     if ([_request.HTTPMethod isEqualToString:@"POST"]) {
-        [self sendPostRequest:_request];
+        [self private_sendPostRequest:_request];
     } else {
         
     }
@@ -65,24 +65,25 @@
 
 #pragma mark - Private
 
-- (BOOL)checkNetWork {
+- (BOOL)private_checkNetWork {
     return [[Reachability reachabilityWithHostName:@"msjdpay.jd.com"] isReachable];
 }
 
-- (BOOL)checkURLWithRequest:(JDPNetHTTPRequest *)request {
+- (BOOL)private_checkURLWithRequest:(JDPNetHTTPRequest *)request {
     if (!request.serverURL || [request.serverURL isEqualToString:@""] || !request.functionID || [request.functionID isEqualToString:@""]) {
         return NO;
     }
     return YES;
 }
 
-- (void)sendPostRequest:(JDPNetHTTPRequest *)request {
+- (void)private_sendPostRequest:(JDPNetHTTPRequest *)request {
     /// 判断是否已经取消
     if (self.isCancelled) {
         return;
     }
     
-    NSString *urlString = [NSString stringWithFormat:@"%@/%@", request.serverURL, request.functionID];
+    // NSString *urlString = [NSString stringWithFormat:@"%@/%@", request.serverURL, request.functionID];
+    NSString *urlString = [NSString stringWithFormat:request.serverURL, request.functionID];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *URLRequest = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:request.timeoutInterval];
     
@@ -92,8 +93,9 @@
     NSData *bodyData = [JDPNetParse dataWithJSONObject:request.paramDict];
     [URLRequest setHTTPBody:bodyData];
     
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *URLsession = [NSURLSession sessionWithConfiguration:configuration];
+//    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+//    NSURLSession *URLsession = [NSURLSession sessionWithConfiguration:configuration];
+    NSURLSession *URLsession = [NSURLSession sharedSession];
     NSURLSessionDataTask *task = [URLsession dataTaskWithRequest:URLRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         /// 判断是否已经取消
@@ -106,7 +108,7 @@
         
         /// 请求失败
         if (error) {
-            [self requestFailureWithError:error];
+            [self private_requestFailureWithError:error];
             return;
         }
         
@@ -116,12 +118,12 @@
         // 接收数据
         request.dataObject = object;
         
-        [self requestSuccess];
+        [self private_requestSuccess];
     }];
     [task resume];
 }
 
-- (void)requestFailureWithError:(NSError *)error {
+- (void)private_requestFailureWithError:(NSError *)error {
     // 保证回调在主线程
     dispatch_async(dispatch_get_main_queue(), ^{
         self.failureBlock(_request, error);
@@ -129,7 +131,8 @@
     });
 }
 
-- (void)requestSuccess {
+- (void)private_requestSuccess {
+    // 保证回调在主线程
     dispatch_async(dispatch_get_main_queue(), ^{
         self.successBlock(_request);
         [[JDPNetManager sharedManager] removeRequestWithIdentifier:self.identifier];

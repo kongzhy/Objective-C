@@ -18,13 +18,11 @@
 		65EDF5D11C885EFD00095FD9 /* JDPBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5CE1C885EFD00095FD9 /* JDPBaseObject.m */; };
 		CC13FCD61E66704A001D1996 /* JDPNetDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCBF1E66704A001D1996 /* JDPNetDefine.m */; };
 		CC13FCD71E66704A001D1996 /* JDPNetHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCC11E66704A001D1996 /* JDPNetHTTPRequest.m */; };
-		CC13FCD81E66704A001D1996 /* JDPNetHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCC31E66704A001D1996 /* JDPNetHTTPResponse.m */; };
 		CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCC51E66704A001D1996 /* JDPNetHTTPSession.m */; };
 		CC13FCDA1E66704A001D1996 /* JDPNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCC71E66704A001D1996 /* JDPNetManager.m */; };
 		CC13FCDB1E66704A001D1996 /* JDPNetParse.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCC91E66704A001D1996 /* JDPNetParse.m */; };
 		CC13FCDC1E66704A001D1996 /* JDPNetBizDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCCC1E66704A001D1996 /* JDPNetBizDefine.m */; };
 		CC13FCDD1E66704A001D1996 /* JDPNetBizHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCCE1E66704A001D1996 /* JDPNetBizHTTPRequest.m */; };
-		CC13FCDE1E66704A001D1996 /* JDPNetBizHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCD01E66704A001D1996 /* JDPNetBizHTTPResponse.m */; };
 		CC13FCDF1E66704A001D1996 /* JDPNetBizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCD21E66704A001D1996 /* JDPNetBizManager.m */; };
 		CC13FCE01E66704A001D1996 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCD51E66704A001D1996 /* Reachability.m */; };
 		CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */; };
@@ -72,8 +70,6 @@
 		CC13FCBF1E66704A001D1996 /* JDPNetDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetDefine.m; sourceTree = "<group>"; };
 		CC13FCC01E66704A001D1996 /* JDPNetHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetHTTPRequest.h; sourceTree = "<group>"; };
 		CC13FCC11E66704A001D1996 /* JDPNetHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetHTTPRequest.m; sourceTree = "<group>"; };
-		CC13FCC21E66704A001D1996 /* JDPNetHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetHTTPResponse.h; sourceTree = "<group>"; };
-		CC13FCC31E66704A001D1996 /* JDPNetHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetHTTPResponse.m; sourceTree = "<group>"; };
 		CC13FCC41E66704A001D1996 /* JDPNetHTTPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetHTTPSession.h; sourceTree = "<group>"; };
 		CC13FCC51E66704A001D1996 /* JDPNetHTTPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetHTTPSession.m; sourceTree = "<group>"; };
 		CC13FCC61E66704A001D1996 /* JDPNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetManager.h; sourceTree = "<group>"; };
@@ -84,8 +80,6 @@
 		CC13FCCC1E66704A001D1996 /* JDPNetBizDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetBizDefine.m; sourceTree = "<group>"; };
 		CC13FCCD1E66704A001D1996 /* JDPNetBizHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetBizHTTPRequest.h; sourceTree = "<group>"; };
 		CC13FCCE1E66704A001D1996 /* JDPNetBizHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetBizHTTPRequest.m; sourceTree = "<group>"; };
-		CC13FCCF1E66704A001D1996 /* JDPNetBizHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetBizHTTPResponse.h; sourceTree = "<group>"; };
-		CC13FCD01E66704A001D1996 /* JDPNetBizHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetBizHTTPResponse.m; sourceTree = "<group>"; };
 		CC13FCD11E66704A001D1996 /* JDPNetBizManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetBizManager.h; sourceTree = "<group>"; };
 		CC13FCD21E66704A001D1996 /* JDPNetBizManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetBizManager.m; sourceTree = "<group>"; };
 		CC13FCD41E66704A001D1996 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -282,8 +276,6 @@
 				CC13FCBF1E66704A001D1996 /* JDPNetDefine.m */,
 				CC13FCC01E66704A001D1996 /* JDPNetHTTPRequest.h */,
 				CC13FCC11E66704A001D1996 /* JDPNetHTTPRequest.m */,
-				CC13FCC21E66704A001D1996 /* JDPNetHTTPResponse.h */,
-				CC13FCC31E66704A001D1996 /* JDPNetHTTPResponse.m */,
 				CC13FCC41E66704A001D1996 /* JDPNetHTTPSession.h */,
 				CC13FCC51E66704A001D1996 /* JDPNetHTTPSession.m */,
 				CC13FCC61E66704A001D1996 /* JDPNetManager.h */,
@@ -301,8 +293,6 @@
 				CC13FCCC1E66704A001D1996 /* JDPNetBizDefine.m */,
 				CC13FCCD1E66704A001D1996 /* JDPNetBizHTTPRequest.h */,
 				CC13FCCE1E66704A001D1996 /* JDPNetBizHTTPRequest.m */,
-				CC13FCCF1E66704A001D1996 /* JDPNetBizHTTPResponse.h */,
-				CC13FCD01E66704A001D1996 /* JDPNetBizHTTPResponse.m */,
 				CC13FCD11E66704A001D1996 /* JDPNetBizManager.h */,
 				CC13FCD21E66704A001D1996 /* JDPNetBizManager.m */,
 			);
@@ -397,7 +387,7 @@
 		65EDF5841C84918600095FD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = JDJR;
 				TargetAttributes = {
 					65EDF58B1C84918600095FD9 = {
@@ -479,8 +469,6 @@
 				CC13FCD71E66704A001D1996 /* JDPNetHTTPRequest.m in Sources */,
 				CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */,
 				65EDF5911C84918600095FD9 /* main.m in Sources */,
-				CC13FCDE1E66704A001D1996 /* JDPNetBizHTTPResponse.m in Sources */,
-				CC13FCD81E66704A001D1996 /* JDPNetHTTPResponse.m in Sources */,
 				CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */,
 				CC13FCDC1E66704A001D1996 /* JDPNetBizDefine.m in Sources */,
 				65EDF5D11C885EFD00095FD9 /* JDPBaseObject.m in Sources */,
@@ -544,8 +532,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -588,8 +578,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

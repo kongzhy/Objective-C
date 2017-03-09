@@ -10,15 +10,32 @@
 
 @interface JDPNetBizHTTPRequest : JDPNetHTTPRequest
 
+
+/**
+ 请求成功编码，默认为@0
+ 如果返回resultCode在successCodes中，为业务成功，否者为失败
+ 
+ */
 @property (nonatomic, copy) NSArray *successCodes;
 
-
+/**
+ 返回码
+ */
 @property (nonatomic, copy) NSString *resultCode;
 
+/**
+ 返回消息
+ */
 @property (nonatomic, copy) NSString *resultMsg;
 
-@property (nonatomic, copy) NSObject *resultData;
+/**
+ 返回数据
+ */
+@property (nonatomic, strong) id resultData;
 
-@property (nonatomic, copy) NSObject *resultCtrl;
+/**
+ 返回控制
+ */
+@property (nonatomic, strong) id resultCtrl;
 
 @end

@@ -22,7 +22,7 @@
     if (self) {
         _serverURL = @"";
         _HTTPMethod = @"POST";
-        _timeoutInterval = 20;
+        _timeoutInterval = 12;
     }
     return self;
 }
