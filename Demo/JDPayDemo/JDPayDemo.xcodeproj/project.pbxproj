@@ -16,6 +16,7 @@
 		65EDF5AA1C84918600095FD9 /* JDPayDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5A91C84918600095FD9 /* JDPayDemoTests.m */; };
 		65EDF5B51C84918600095FD9 /* JDPayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5B41C84918600095FD9 /* JDPayDemoUITests.m */; };
 		65EDF5D11C885EFD00095FD9 /* JDPBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5CE1C885EFD00095FD9 /* JDPBaseObject.m */; };
+		CC01EAA41E8BCFDB00981A6A /* JDPImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC01EAA31E8BCFDB00981A6A /* JDPImageUtils.m */; };
 		CC13FCD61E66704A001D1996 /* JDPNetDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCBF1E66704A001D1996 /* JDPNetDefine.m */; };
 		CC13FCD71E66704A001D1996 /* JDPNetHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCC11E66704A001D1996 /* JDPNetHTTPRequest.m */; };
 		CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCC51E66704A001D1996 /* JDPNetHTTPSession.m */; };
@@ -26,6 +27,7 @@
 		CC13FCDF1E66704A001D1996 /* JDPNetBizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCD21E66704A001D1996 /* JDPNetBizManager.m */; };
 		CC13FCE01E66704A001D1996 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCD51E66704A001D1996 /* Reachability.m */; };
 		CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */; };
+		CC65C6041E978DE60044DC45 /* JDPRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC65C6031E978DE60044DC45 /* JDPRuntimeUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		65EDF5B61C84918600095FD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65EDF5CD1C885EFD00095FD9 /* JDPBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPBaseObject.h; sourceTree = "<group>"; };
 		65EDF5CE1C885EFD00095FD9 /* JDPBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPBaseObject.m; sourceTree = "<group>"; };
+		CC01EAA21E8BCFDB00981A6A /* JDPImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPImageUtils.h; sourceTree = "<group>"; };
+		CC01EAA31E8BCFDB00981A6A /* JDPImageUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPImageUtils.m; sourceTree = "<group>"; };
 		CC13FCBE1E66704A001D1996 /* JDPNetDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetDefine.h; sourceTree = "<group>"; };
 		CC13FCBF1E66704A001D1996 /* JDPNetDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPNetDefine.m; sourceTree = "<group>"; };
 		CC13FCC01E66704A001D1996 /* JDPNetHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPNetHTTPRequest.h; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		CC13FCD51E66704A001D1996 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CC4701091CD1F9C6001DB5AD /* JDPDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPDeviceUtils.h; sourceTree = "<group>"; };
 		CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPDeviceUtils.m; sourceTree = "<group>"; };
+		CC65C6021E978DE60044DC45 /* JDPRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPRuntimeUtils.h; sourceTree = "<group>"; };
+		CC65C6031E978DE60044DC45 /* JDPRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPRuntimeUtils.m; sourceTree = "<group>"; };
 		CC67321E1D6B170900172C32 /* JDPColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPColorMacros.h; sourceTree = "<group>"; };
 		CC67321F1D6B179900172C32 /* JDPLogMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPLogMacros.h; sourceTree = "<group>"; };
 		CC6733311D6F058000172C32 /* JDPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPMacros.h; sourceTree = "<group>"; };
@@ -259,6 +265,15 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		CC01EAA11E8BCFBB00981A6A /* JDPImageUtils */ = {
+			isa = PBXGroup;
+			children = (
+				CC01EAA21E8BCFDB00981A6A /* JDPImageUtils.h */,
+				CC01EAA31E8BCFDB00981A6A /* JDPImageUtils.m */,
+			);
+			path = JDPImageUtils;
+			sourceTree = "<group>";
+		};
 		CC13FCBC1E66704A001D1996 /* JDPNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +326,8 @@
 		CC4700C01CD1D77B001DB5AD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CC65C6011E978DE60044DC45 /* JDPRuntimeUtils */,
+				CC01EAA11E8BCFBB00981A6A /* JDPImageUtils */,
 				CC4701081CD1F9C6001DB5AD /* JDPDeviceUtils */,
 			);
 			path = Utils;
@@ -323,6 +340,15 @@
 				CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */,
 			);
 			path = JDPDeviceUtils;
+			sourceTree = "<group>";
+		};
+		CC65C6011E978DE60044DC45 /* JDPRuntimeUtils */ = {
+			isa = PBXGroup;
+			children = (
+				CC65C6021E978DE60044DC45 /* JDPRuntimeUtils.h */,
+				CC65C6031E978DE60044DC45 /* JDPRuntimeUtils.m */,
+			);
+			path = JDPRuntimeUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,7 +495,9 @@
 				CC13FCD71E66704A001D1996 /* JDPNetHTTPRequest.m in Sources */,
 				CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */,
 				65EDF5911C84918600095FD9 /* main.m in Sources */,
+				CC65C6041E978DE60044DC45 /* JDPRuntimeUtils.m in Sources */,
 				CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */,
+				CC01EAA41E8BCFDB00981A6A /* JDPImageUtils.m in Sources */,
 				CC13FCDC1E66704A001D1996 /* JDPNetBizDefine.m in Sources */,
 				65EDF5D11C885EFD00095FD9 /* JDPBaseObject.m in Sources */,
 				CC13FCE01E66704A001D1996 /* Reachability.m in Sources */,
