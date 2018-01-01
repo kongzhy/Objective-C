@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6545D18F1FFA16FB003C81B3 /* JDPPayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */; };
 		6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586C0331CECB3E3009AF15A /* RootViewController.m */; };
 		65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */; };
 		65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6545D18D1FFA16FB003C81B3 /* JDPPayInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPPayInfo.h; sourceTree = "<group>"; };
+		6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDPPayInfo.m; sourceTree = "<group>"; };
 		6586C0321CECB3E3009AF15A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		6586C0331CECB3E3009AF15A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		65AB37C31FF9CBD3008099C2 /* UIButton+JDPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JDPCategory.h"; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				65EDF5931C84918600095FD9 /* AppDelegate.m */,
 				6586C0321CECB3E3009AF15A /* RootViewController.h */,
 				6586C0331CECB3E3009AF15A /* RootViewController.m */,
+				6545D18D1FFA16FB003C81B3 /* JDPPayInfo.h */,
+				6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */,
 				65EDF59B1C84918600095FD9 /* Assets.xcassets */,
 				65EDF59D1C84918600095FD9 /* LaunchScreen.storyboard */,
 				65EDF5A01C84918600095FD9 /* Info.plist */,
@@ -499,6 +504,7 @@
 				CC13FCD61E66704A001D1996 /* JDPNetDefine.m in Sources */,
 				65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */,
 				CC13FCD71E66704A001D1996 /* JDPNetHTTPRequest.m in Sources */,
+				6545D18F1FFA16FB003C81B3 /* JDPPayInfo.m in Sources */,
 				CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */,
 				65EDF5911C84918600095FD9 /* main.m in Sources */,
 				CC65C6041E978DE60044DC45 /* JDPRuntimeUtils.m in Sources */,
@@ -656,6 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VN6P62PKKU;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = JDPayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jd.JDPayDemo;
@@ -670,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = JDPayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jd.JDPayDemo;

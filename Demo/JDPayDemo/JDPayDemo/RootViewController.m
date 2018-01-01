@@ -10,6 +10,7 @@
 #import "JDPLogMacros.h"
 #import "JDPNetBizManager.h"
 #import "UIButton+JDPCategory.h"
+#import <objc/message.h>
 
 @interface RootViewController ()
 
@@ -27,7 +28,7 @@
 
 - (void)createRequestButton {
     UIButton *button = [UIButton jdp_buttonWithTitle:@"Request" type:UIButtonTypeSystem handler:^{
-        [self startRequest];
+        [self startTest];
     }];
     button.bounds = CGRectMake(0, 0, 200.f, 40.f);
     button.center = self.view.center;
@@ -35,14 +36,18 @@
     [self.view addSubview:button];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    JDP_Log(@"Cownay");
-    //[self startRequest];
+- (void)startTest {
+//    Class class = NSClassFromString(@"JDPPayInfo");
+//    id object = [[class alloc] init];
+//    // objc_msgSend(class, @selector(dynamicClassMethod));
+//    objc_msgSend(object, @selector(pay));
+    
+    // message swizzling
+    Method method1 = class_getInstanceMethod([NSString class], @selector(lowercaseString));
+    Method method2 = class_getInstanceMethod([NSString class], @selector(uppercaseString));
+    method_exchangeImplementations(method1, method2);
+    NSString *string = @"Hello World!";
+    NSLog(@"%@", [string lowercaseString]);
 }
 
 
