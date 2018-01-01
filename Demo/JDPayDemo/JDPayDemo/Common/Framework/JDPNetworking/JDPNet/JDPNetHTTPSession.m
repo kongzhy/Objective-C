@@ -82,8 +82,8 @@
         return;
     }
     
-    // NSString *urlString = [NSString stringWithFormat:@"%@/%@", request.serverURL, request.functionID];
-    NSString *urlString = [NSString stringWithFormat:request.serverURL, request.functionID];
+    NSString *urlString = [NSString stringWithFormat:@"%@/%@", request.serverURL, request.functionID];
+    // NSString *urlString = [NSString stringWithFormat:request.serverURL, request.functionID];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *URLRequest = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:request.timeoutInterval];
     

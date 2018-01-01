@@ -9,7 +9,7 @@
 #import "RootViewController.h"
 #import "JDPLogMacros.h"
 #import "JDPNetBizManager.h"
-
+#import "UIButton+JDPCategory.h"
 
 @interface RootViewController ()
 
@@ -26,12 +26,12 @@
 }
 
 - (void)createRequestButton {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *button = [UIButton jdp_buttonWithTitle:@"Request" type:UIButtonTypeSystem handler:^{
+        [self startRequest];
+    }];
     button.bounds = CGRectMake(0, 0, 200.f, 40.f);
     button.center = self.view.center;
     button.backgroundColor = [UIColor lightGrayColor];
-    [button setTitle:@"Request" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(startRequest) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
 
@@ -48,7 +48,7 @@
 
 - (void)startRequest {
     JDPNetBizHTTPRequest *bizHTTPRequest = [[JDPNetBizHTTPRequest alloc] init];
-    bizHTTPRequest.serverURL = @"https://payfront.jd.com";
+    bizHTTPRequest.serverURL = @"http://payfrontyf.jd.com";
     bizHTTPRequest.functionID = @"service/preparePay";
     NSDictionary *paramDict = @{
                                 @"app_id" : @"com.wangyin.sdk",

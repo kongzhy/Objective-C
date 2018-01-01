@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586C0331CECB3E3009AF15A /* RootViewController.m */; };
+		65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */; };
 		65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */; };
 		65EDF5911C84918600095FD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5901C84918600095FD9 /* main.m */; };
 		65EDF5941C84918600095FD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5931C84918600095FD9 /* AppDelegate.m */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		6586C0321CECB3E3009AF15A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		6586C0331CECB3E3009AF15A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		65AB37C31FF9CBD3008099C2 /* UIButton+JDPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JDPCategory.h"; sourceTree = "<group>"; };
+		65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JDPCategory.m"; sourceTree = "<group>"; };
 		65D1EBBE1C8D28F7001CEE3C /* UIWebView+JDPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JDPCategory.h"; sourceTree = "<group>"; };
 		65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JDPCategory.m"; sourceTree = "<group>"; };
 		65D1EC081C8F279F001CEE3C /* JDPScreenMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPScreenMacros.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 			children = (
 				65D1EBBE1C8D28F7001CEE3C /* UIWebView+JDPCategory.h */,
 				65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */,
+				65AB37C31FF9CBD3008099C2 /* UIButton+JDPCategory.h */,
+				65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -413,7 +418,7 @@
 		65EDF5841C84918600095FD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = JDJR;
 				TargetAttributes = {
 					65EDF58B1C84918600095FD9 = {
@@ -492,6 +497,7 @@
 				65EDF5941C84918600095FD9 /* AppDelegate.m in Sources */,
 				CC13FCDB1E66704A001D1996 /* JDPNetParse.m in Sources */,
 				CC13FCD61E66704A001D1996 /* JDPNetDefine.m in Sources */,
+				65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */,
 				CC13FCD71E66704A001D1996 /* JDPNetHTTPRequest.m in Sources */,
 				CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */,
 				65EDF5911C84918600095FD9 /* main.m in Sources */,
@@ -555,14 +561,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -601,14 +613,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
