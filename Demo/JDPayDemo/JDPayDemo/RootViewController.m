@@ -43,11 +43,14 @@
 //    objc_msgSend(object, @selector(pay));
     
     // message swizzling
-    Method method1 = class_getInstanceMethod([NSString class], @selector(lowercaseString));
-    Method method2 = class_getInstanceMethod([NSString class], @selector(uppercaseString));
-    method_exchangeImplementations(method1, method2);
-    NSString *string = @"Hello World!";
-    NSLog(@"%@", [string lowercaseString]);
+//    Method method1 = class_getInstanceMethod([NSString class], @selector(lowercaseString));
+//    Method method2 = class_getInstanceMethod([NSString class], @selector(uppercaseString));
+//    method_exchangeImplementations(method1, method2);
+//    NSString *string = @"Hello World!";
+//    NSLog(@"%@", [string lowercaseString]);
+    
+    NSArray *array = @[@"Kong"];
+    NSLog(@"%@", [array objectAtIndex:1]);
 }
 
 

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6545D18F1FFA16FB003C81B3 /* JDPPayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */; };
+		6545D1951FFA6BF0003C81B3 /* NSArray+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */; };
+		6545D19E1FFA72AB003C81B3 /* CBCrashProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */; };
 		6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586C0331CECB3E3009AF15A /* RootViewController.m */; };
 		65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */; };
 		65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */; };
@@ -52,6 +54,10 @@
 /* Begin PBXFileReference section */
 		6545D18D1FFA16FB003C81B3 /* JDPPayInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPPayInfo.h; sourceTree = "<group>"; };
 		6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDPPayInfo.m; sourceTree = "<group>"; };
+		6545D1931FFA6BF0003C81B3 /* NSArray+JDPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JDPCategory.h"; sourceTree = "<group>"; };
+		6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JDPCategory.m"; sourceTree = "<group>"; };
+		6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCrashProtection.m; path = ../../../../../Working/Local/CBCrashProtection/CBCrashProtection.m; sourceTree = "<group>"; };
+		6545D19D1FFA72AB003C81B3 /* CBCrashProtection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCrashProtection.h; path = ../../../../../Working/Local/CBCrashProtection/CBCrashProtection.h; sourceTree = "<group>"; };
 		6586C0321CECB3E3009AF15A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		6586C0331CECB3E3009AF15A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		65AB37C31FF9CBD3008099C2 /* UIButton+JDPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JDPCategory.h"; sourceTree = "<group>"; };
@@ -139,10 +145,12 @@
 		65D1EBBD1C8D28D6001CEE3C /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				65D1EBBE1C8D28F7001CEE3C /* UIWebView+JDPCategory.h */,
-				65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */,
+				6545D1931FFA6BF0003C81B3 /* NSArray+JDPCategory.h */,
+				6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */,
 				65AB37C31FF9CBD3008099C2 /* UIButton+JDPCategory.h */,
 				65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */,
+				65D1EBBE1C8D28F7001CEE3C /* UIWebView+JDPCategory.h */,
+				65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -188,6 +196,8 @@
 				6586C0331CECB3E3009AF15A /* RootViewController.m */,
 				6545D18D1FFA16FB003C81B3 /* JDPPayInfo.h */,
 				6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */,
+				6545D19D1FFA72AB003C81B3 /* CBCrashProtection.h */,
+				6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */,
 				65EDF59B1C84918600095FD9 /* Assets.xcassets */,
 				65EDF59D1C84918600095FD9 /* LaunchScreen.storyboard */,
 				65EDF5A01C84918600095FD9 /* Info.plist */,
@@ -494,9 +504,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6545D19E1FFA72AB003C81B3 /* CBCrashProtection.m in Sources */,
 				65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */,
 				6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */,
 				CC13FCDF1E66704A001D1996 /* JDPNetBizManager.m in Sources */,
+				6545D1951FFA6BF0003C81B3 /* NSArray+JDPCategory.m in Sources */,
 				CC13FCDD1E66704A001D1996 /* JDPNetBizHTTPRequest.m in Sources */,
 				CC13FCDA1E66704A001D1996 /* JDPNetManager.m in Sources */,
 				65EDF5941C84918600095FD9 /* AppDelegate.m in Sources */,
