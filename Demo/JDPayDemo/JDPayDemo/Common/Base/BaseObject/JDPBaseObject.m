@@ -10,4 +10,14 @@
 
 @implementation JDPBaseObject
 
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    return signature;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation {
+    NSLog(@"%@", anInvocation.target);
+    NSLog(@"%@", NSStringFromSelector(anInvocation.selector));
+}
+
 @end

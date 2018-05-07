@@ -27,6 +27,8 @@
 		CC13FCDF1E66704A001D1996 /* JDPNetBizManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCD21E66704A001D1996 /* JDPNetBizManager.m */; };
 		CC13FCE01E66704A001D1996 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC13FCD51E66704A001D1996 /* Reachability.m */; };
 		CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */; };
+		CC54013C1ED52EC700792378 /* NSMutableArray+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5401391ED52EC700792378 /* NSMutableArray+JDPCategory.m */; };
+		CC54013D1ED52EC700792378 /* NSMutableDictionary+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CC54013B1ED52EC700792378 /* NSMutableDictionary+JDPCategory.m */; };
 		CC65C6041E978DE60044DC45 /* JDPRuntimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CC65C6031E978DE60044DC45 /* JDPRuntimeUtils.m */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,10 @@
 		CC13FCD51E66704A001D1996 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CC4701091CD1F9C6001DB5AD /* JDPDeviceUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPDeviceUtils.h; sourceTree = "<group>"; };
 		CC47010A1CD1F9C6001DB5AD /* JDPDeviceUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPDeviceUtils.m; sourceTree = "<group>"; };
+		CC5401381ED52EC700792378 /* NSMutableArray+JDPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+JDPCategory.h"; sourceTree = "<group>"; };
+		CC5401391ED52EC700792378 /* NSMutableArray+JDPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+JDPCategory.m"; sourceTree = "<group>"; };
+		CC54013A1ED52EC700792378 /* NSMutableDictionary+JDPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+JDPCategory.h"; sourceTree = "<group>"; };
+		CC54013B1ED52EC700792378 /* NSMutableDictionary+JDPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+JDPCategory.m"; sourceTree = "<group>"; };
 		CC65C6021E978DE60044DC45 /* JDPRuntimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPRuntimeUtils.h; sourceTree = "<group>"; };
 		CC65C6031E978DE60044DC45 /* JDPRuntimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDPRuntimeUtils.m; sourceTree = "<group>"; };
 		CC67321E1D6B170900172C32 /* JDPColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPColorMacros.h; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 		65D1EBBD1C8D28D6001CEE3C /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CC5401381ED52EC700792378 /* NSMutableArray+JDPCategory.h */,
+				CC5401391ED52EC700792378 /* NSMutableArray+JDPCategory.m */,
+				CC54013A1ED52EC700792378 /* NSMutableDictionary+JDPCategory.h */,
+				CC54013B1ED52EC700792378 /* NSMutableDictionary+JDPCategory.m */,
 				65D1EBBE1C8D28F7001CEE3C /* UIWebView+JDPCategory.h */,
 				65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */,
 			);
@@ -496,9 +506,11 @@
 				CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */,
 				65EDF5911C84918600095FD9 /* main.m in Sources */,
 				CC65C6041E978DE60044DC45 /* JDPRuntimeUtils.m in Sources */,
+				CC54013C1ED52EC700792378 /* NSMutableArray+JDPCategory.m in Sources */,
 				CC47010B1CD1F9C6001DB5AD /* JDPDeviceUtils.m in Sources */,
 				CC01EAA41E8BCFDB00981A6A /* JDPImageUtils.m in Sources */,
 				CC13FCDC1E66704A001D1996 /* JDPNetBizDefine.m in Sources */,
+				CC54013D1ED52EC700792378 /* NSMutableDictionary+JDPCategory.m in Sources */,
 				65EDF5D11C885EFD00095FD9 /* JDPBaseObject.m in Sources */,
 				CC13FCE01E66704A001D1996 /* Reachability.m in Sources */,
 			);

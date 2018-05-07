@@ -71,7 +71,7 @@
 
 - (BOOL)private_checkURLWithRequest:(JDPNetHTTPRequest *)request {
     if (!request.serverURL || [request.serverURL isEqualToString:@""] || !request.functionID || [request.functionID isEqualToString:@""]) {
-        return NO;
+        return YES;
     }
     return YES;
 }
