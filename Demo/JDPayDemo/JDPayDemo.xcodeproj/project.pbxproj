@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6545D18F1FFA16FB003C81B3 /* JDPPayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */; };
 		6545D1951FFA6BF0003C81B3 /* NSArray+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */; };
-		6545D19E1FFA72AB003C81B3 /* CBCrashProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */; };
 		65690F05209E90AE005780C6 /* NSTimer+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65690F04209E90AD005780C6 /* NSTimer+JDPCategory.m */; };
 		6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586C0331CECB3E3009AF15A /* RootViewController.m */; };
 		65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */; };
@@ -59,8 +58,6 @@
 		6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDPPayInfo.m; sourceTree = "<group>"; };
 		6545D1931FFA6BF0003C81B3 /* NSArray+JDPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JDPCategory.h"; sourceTree = "<group>"; };
 		6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JDPCategory.m"; sourceTree = "<group>"; };
-		6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCrashProtection.m; path = ../../../../../Working/Local/CBCrashProtection/CBCrashProtection.m; sourceTree = "<group>"; };
-		6545D19D1FFA72AB003C81B3 /* CBCrashProtection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCrashProtection.h; path = ../../../../../Working/Local/CBCrashProtection/CBCrashProtection.h; sourceTree = "<group>"; };
 		65690F03209E90AD005780C6 /* NSTimer+JDPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+JDPCategory.h"; sourceTree = "<group>"; };
 		65690F04209E90AD005780C6 /* NSTimer+JDPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+JDPCategory.m"; sourceTree = "<group>"; };
 		6586C0321CECB3E3009AF15A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -211,8 +208,6 @@
 				6586C0331CECB3E3009AF15A /* RootViewController.m */,
 				6545D18D1FFA16FB003C81B3 /* JDPPayInfo.h */,
 				6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */,
-				6545D19D1FFA72AB003C81B3 /* CBCrashProtection.h */,
-				6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */,
 				65EDF59B1C84918600095FD9 /* Assets.xcassets */,
 				65EDF59D1C84918600095FD9 /* LaunchScreen.storyboard */,
 				65EDF5A01C84918600095FD9 /* Info.plist */,
@@ -519,7 +514,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6545D19E1FFA72AB003C81B3 /* CBCrashProtection.m in Sources */,
 				65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */,
 				6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */,
 				65690F05209E90AE005780C6 /* NSTimer+JDPCategory.m in Sources */,
