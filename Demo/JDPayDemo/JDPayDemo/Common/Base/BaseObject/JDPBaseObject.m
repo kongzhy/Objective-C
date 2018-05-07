@@ -7,6 +7,7 @@
 //
 
 #import "JDPBaseObject.h"
+#import <objc/runtime.h>
 
 @implementation JDPBaseObject
 

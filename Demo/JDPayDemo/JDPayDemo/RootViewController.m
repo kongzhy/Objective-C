@@ -9,7 +9,8 @@
 #import "RootViewController.h"
 #import "JDPLogMacros.h"
 #import "JDPNetBizManager.h"
-
+#import "UIButton+JDPCategory.h"
+#import <objc/message.h>
 
 @interface RootViewController ()
 
@@ -26,12 +27,12 @@
 }
 
 - (void)createRequestButton {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *button = [UIButton jdp_buttonWithTitle:@"Request" type:UIButtonTypeSystem handler:^{
+        [self startRequest];
+    }];
     button.bounds = CGRectMake(0, 0, 200.f, 40.f);
     button.center = self.view.center;
     button.backgroundColor = [UIColor lightGrayColor];
-    [button setTitle:@"Request" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(startRequest) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
 
@@ -45,26 +46,25 @@
     [self startRequest];
 }
 
-
 - (void)startRequest {
     JDPNetBizHTTPRequest *bizHTTPRequest = [[JDPNetBizHTTPRequest alloc] init];
-    bizHTTPRequest.serverURL = @"http://www.kongzhaoyang.top/test.js";
-    // bizHTTPRequest.functionID = @"service/preparePay";
-//    NSDictionary *paramDict = @{
-//                                @"app_id" : @"com.wangyin.sdk",
-//                                @"payParam" : @"4da0365626e73cb98d43d70fd8324de7dfa3496b34192ba5c7a499ee2d5adb43bac03fca0414af661dda89d30fe97653dbe70e50690cd8ab19c22300200781665f13fd2b5f4c297409ac81bf8167ad6b906a0facc83bd4a253a32e4359848e97b66933beea4d6d3bc6c637160b1a144d",
-//                                @"idfa" : @"D75A62EC-CCF4-4F88-A32B-F584681B15B9",
-//                                @"clientVersion" : @"1.0",
-//                                @"osVersion" : @"9.3",
-//                                @"openUDID" : @"1942d8f68e3e9ea09631dac42f162c2152b3e4fc",
-//                                @"deviceType" : @"x86_64",
-//                                @"appId" : @"mallapp",
-//                                @"networkType" : @"WIFI",
-//                                @"resolution" : @"750*1334",
-//                                @"sdkVersion" : @"1.1.0",
-//                                @"osPlatform" : @"iPhone OS"
-//                                };
-    // bizHTTPRequest.paramDict = paramDict;
+    bizHTTPRequest.serverURL = @"http://payfrontyf.jd.com";
+    bizHTTPRequest.functionID = @"service/preparePay";
+    NSDictionary *paramDict = @{
+                                @"app_id" : @"com.wangyin.sdk",
+                                @"payParam" : @"4da0365626e73cb98d43d70fd8324de7dfa3496b34192ba5c7a499ee2d5adb43bac03fca0414af661dda89d30fe97653dbe70e50690cd8ab19c22300200781665f13fd2b5f4c297409ac81bf8167ad6b906a0facc83bd4a253a32e4359848e97b66933beea4d6d3bc6c637160b1a144d",
+                                @"idfa" : @"D75A62EC-CCF4-4F88-A32B-F584681B15B9",
+                                @"clientVersion" : @"1.0",
+                                @"osVersion" : @"9.3",
+                                @"openUDID" : @"1942d8f68e3e9ea09631dac42f162c2152b3e4fc",
+                                @"deviceType" : @"x86_64",
+                                @"appId" : @"mallapp",
+                                @"networkType" : @"WIFI",
+                                @"resolution" : @"750*1334",
+                                @"sdkVersion" : @"1.1.0",
+                                @"osPlatform" : @"iPhone OS"
+                                };
+    bizHTTPRequest.paramDict = paramDict;
     
     [JDPNetBizManager sendAsynchronousRequest:bizHTTPRequest success:^(JDPNetBizHTTPRequest *bizHTTPRequest) {
         NSLog(@"%@", bizHTTPRequest.dataObject);

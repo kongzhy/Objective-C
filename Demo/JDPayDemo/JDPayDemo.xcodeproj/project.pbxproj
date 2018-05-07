@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6545D18F1FFA16FB003C81B3 /* JDPPayInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */; };
+		6545D1951FFA6BF0003C81B3 /* NSArray+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */; };
+		6545D19E1FFA72AB003C81B3 /* CBCrashProtection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */; };
+		65690F05209E90AE005780C6 /* NSTimer+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65690F04209E90AD005780C6 /* NSTimer+JDPCategory.m */; };
 		6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6586C0331CECB3E3009AF15A /* RootViewController.m */; };
+		65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */; };
 		65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */; };
 		65EDF5911C84918600095FD9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5901C84918600095FD9 /* main.m */; };
 		65EDF5941C84918600095FD9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDF5931C84918600095FD9 /* AppDelegate.m */; };
@@ -50,8 +55,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6545D18D1FFA16FB003C81B3 /* JDPPayInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDPPayInfo.h; sourceTree = "<group>"; };
+		6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDPPayInfo.m; sourceTree = "<group>"; };
+		6545D1931FFA6BF0003C81B3 /* NSArray+JDPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+JDPCategory.h"; sourceTree = "<group>"; };
+		6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JDPCategory.m"; sourceTree = "<group>"; };
+		6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBCrashProtection.m; path = ../../../../../Working/Local/CBCrashProtection/CBCrashProtection.m; sourceTree = "<group>"; };
+		6545D19D1FFA72AB003C81B3 /* CBCrashProtection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBCrashProtection.h; path = ../../../../../Working/Local/CBCrashProtection/CBCrashProtection.h; sourceTree = "<group>"; };
+		65690F03209E90AD005780C6 /* NSTimer+JDPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+JDPCategory.h"; sourceTree = "<group>"; };
+		65690F04209E90AD005780C6 /* NSTimer+JDPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+JDPCategory.m"; sourceTree = "<group>"; };
 		6586C0321CECB3E3009AF15A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		6586C0331CECB3E3009AF15A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		65AB37C31FF9CBD3008099C2 /* UIButton+JDPCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+JDPCategory.h"; sourceTree = "<group>"; };
+		65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JDPCategory.m"; sourceTree = "<group>"; };
 		65D1EBBE1C8D28F7001CEE3C /* UIWebView+JDPCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JDPCategory.h"; sourceTree = "<group>"; };
 		65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JDPCategory.m"; sourceTree = "<group>"; };
 		65D1EC081C8F279F001CEE3C /* JDPScreenMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDPScreenMacros.h; sourceTree = "<group>"; };
@@ -143,6 +158,12 @@
 				CC5401391ED52EC700792378 /* NSMutableArray+JDPCategory.m */,
 				CC54013A1ED52EC700792378 /* NSMutableDictionary+JDPCategory.h */,
 				CC54013B1ED52EC700792378 /* NSMutableDictionary+JDPCategory.m */,
+				65690F03209E90AD005780C6 /* NSTimer+JDPCategory.h */,
+				65690F04209E90AD005780C6 /* NSTimer+JDPCategory.m */,
+				6545D1931FFA6BF0003C81B3 /* NSArray+JDPCategory.h */,
+				6545D1941FFA6BF0003C81B3 /* NSArray+JDPCategory.m */,
+				65AB37C31FF9CBD3008099C2 /* UIButton+JDPCategory.h */,
+				65AB37C41FF9CBD3008099C2 /* UIButton+JDPCategory.m */,
 				65D1EBBE1C8D28F7001CEE3C /* UIWebView+JDPCategory.h */,
 				65D1EBBF1C8D28F7001CEE3C /* UIWebView+JDPCategory.m */,
 			);
@@ -188,6 +209,10 @@
 				65EDF5931C84918600095FD9 /* AppDelegate.m */,
 				6586C0321CECB3E3009AF15A /* RootViewController.h */,
 				6586C0331CECB3E3009AF15A /* RootViewController.m */,
+				6545D18D1FFA16FB003C81B3 /* JDPPayInfo.h */,
+				6545D18E1FFA16FB003C81B3 /* JDPPayInfo.m */,
+				6545D19D1FFA72AB003C81B3 /* CBCrashProtection.h */,
+				6545D19C1FFA72AB003C81B3 /* CBCrashProtection.m */,
 				65EDF59B1C84918600095FD9 /* Assets.xcassets */,
 				65EDF59D1C84918600095FD9 /* LaunchScreen.storyboard */,
 				65EDF5A01C84918600095FD9 /* Info.plist */,
@@ -423,7 +448,7 @@
 		65EDF5841C84918600095FD9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = JDJR;
 				TargetAttributes = {
 					65EDF58B1C84918600095FD9 = {
@@ -494,15 +519,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6545D19E1FFA72AB003C81B3 /* CBCrashProtection.m in Sources */,
 				65D1EBC01C8D28F7001CEE3C /* UIWebView+JDPCategory.m in Sources */,
 				6586C0341CECB3E3009AF15A /* RootViewController.m in Sources */,
+				65690F05209E90AE005780C6 /* NSTimer+JDPCategory.m in Sources */,
 				CC13FCDF1E66704A001D1996 /* JDPNetBizManager.m in Sources */,
+				6545D1951FFA6BF0003C81B3 /* NSArray+JDPCategory.m in Sources */,
 				CC13FCDD1E66704A001D1996 /* JDPNetBizHTTPRequest.m in Sources */,
 				CC13FCDA1E66704A001D1996 /* JDPNetManager.m in Sources */,
 				65EDF5941C84918600095FD9 /* AppDelegate.m in Sources */,
 				CC13FCDB1E66704A001D1996 /* JDPNetParse.m in Sources */,
 				CC13FCD61E66704A001D1996 /* JDPNetDefine.m in Sources */,
+				65AB37C51FF9CBD3008099C2 /* UIButton+JDPCategory.m in Sources */,
 				CC13FCD71E66704A001D1996 /* JDPNetHTTPRequest.m in Sources */,
+				6545D18F1FFA16FB003C81B3 /* JDPPayInfo.m in Sources */,
 				CC13FCD91E66704A001D1996 /* JDPNetHTTPSession.m in Sources */,
 				65EDF5911C84918600095FD9 /* main.m in Sources */,
 				CC65C6041E978DE60044DC45 /* JDPRuntimeUtils.m in Sources */,
@@ -567,14 +597,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -613,14 +649,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -650,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VN6P62PKKU;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = JDPayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jd.JDPayDemo;
@@ -664,6 +707,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = JDPayDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jd.JDPayDemo;
